@@ -1,0 +1,301 @@
+/* https://piccalil.li/blog/a-modern-css-reset */
+
+/* Reset from Andy Bell */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+button,
+select {
+    font: inherit;
+}
+
+hr {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+
+/* Variables */
+:root {
+    --col-bg-accent: #F8F9FA;
+    --col-secondary: #353A49;
+    --col-primary: #1A73E8;
+
+    --fs-small: 0.5rem;
+    --fs-regular: 0.75rem;
+    --fs-subtitle: 1.25rem;
+    --fs-title: 2.19rem;
+
+    --fw-regular: 400;
+    --fw-bold: 700;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: var(--fs-regular);
+    font-weight: var(--fw-regular);
+
+    color: var(--col-secondary);
+}
+
+h3 {
+    font-size: var(--fs-title);
+}
+
+/* Navbar */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1rem;
+    padding-inline: 1rem;
+
+    box-shadow: 2px 6px 9px rgba(0, 0, 0, 0.2);
+}
+
+.icons-navbar {
+    flex-grow: 2;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+
+}
+
+.google-logo {
+    grid-column-start: 2;
+    width: 33px;
+    height: 33px;
+}
+
+.hamburger-menu · {
+    grid-column-start: 4;
+}
+
+.hamburger-menu>* {
+    background-color: var(--col-primary);
+
+    display: block;
+
+    height: 2px;
+    width: 27px;
+    margin: 5px;
+}
+
+/* Main */
+
+main {
+    /* background-color: #1A73E8; */
+
+    display: grid;
+    grid-template-columns: 1fr;
+
+    padding-inline: 22px;
+
+}
+
+.image-container {
+    background-color: var(--col-bg-accent);
+    /* border: 2px solid black; */
+    border-radius: 15px;
+
+}
+
+
+.info-container>h3 {
+    font-size: var(--fs-regular);
+    font-weight: var(--fw-regular);
+}
+
+.colors-group {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.colors-group div {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid var(--col-secondary);
+}
+
+.color-circle1 {
+    background-color: #9EC6EA;
+}
+
+.color-circle2 {
+    background-color: #E7E3E0;
+}
+
+.color-circle3 {
+    background-color: #4B4B4D;
+}
+
+.color-circle4 {
+    background-color: #D2D7DA;
+}
+
+.color-circle5 {
+    background-color: #DFE5B7;
+}
+
+.color-circle6 {
+    background-color: #E18472;
+}
+
+.cart-container {
+    background-color: var(--col-bg-accent);
+    border-radius: 15px;
+
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+select {
+    font-family: inherit;
+    font-size: inherit;
+
+    border: 1px solid var(--col-secondary);
+    border-radius: 5px;
+
+    padding: 10px;
+    width: 20%;
+}
+
+button {
+    display: block;
+
+    background-color: var(--col-primary);
+    color: white;
+    border: none;
+    border-radius: 10px;
+
+    width: 280px;
+    height: 50px;
+}
+
+.delivery-info {
+    display: flex;
+    justify-content: flex-start;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: var(--col-bg-accent);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.socialmedia-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    
+    width: 80%;
+}
+
+.socialmedia-links img {
+    height: 29px;
+}
+
+.spain-link  {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 992px) {
+
+    main {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+}
+
