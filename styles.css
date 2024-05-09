@@ -203,6 +203,28 @@ button {
     gap: 5px;
 }
 
+.colors-list-watch {
+    display: flex;
+    justify-content: space-between;
+}
+
+.colors-list-watch div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid var(--col-secondary);
+    border-radius: 5px;
+
+    height: 106px;
+    width: 96px;
+}
+
+.colors-list-watch img {
+    height: 60%;
+}
+
 .colors-list div {
     width: 36px;
     height: 36px;
