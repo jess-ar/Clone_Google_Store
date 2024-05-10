@@ -324,6 +324,7 @@ button {
     margin: 5px;
 }
 
+
 @media (min-width: 744px) {
     .hamburger-menu {
         display: none;
@@ -367,6 +368,10 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.shadow {
+    filter: drop-shadow(-30px 0px  15px #d1c6c6);
 }
 
 .info-container {
@@ -439,7 +444,7 @@ main {
     }
 
     .main-image-watch {
-        max-height: 70%;
+        max-height: 75%;
     }
 
 
