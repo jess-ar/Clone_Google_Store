@@ -176,6 +176,14 @@ footer {
     margin-top: 10px;
 }
 
+.delivery-info p {
+    font-weight: var(--fw-bold);
+}
+
+.delivery-info p span {
+    color: var(--col-primary);
+}
+
 button {
     display: block;
 
@@ -188,7 +196,7 @@ button {
     height: 50px;
 }
 
-/* Options Colors */
+/* Earbuds Colors Options */
 
 .option-colors>h3 {
     font-size: var(--fs-regular);
@@ -201,28 +209,6 @@ button {
     display: flex;
     align-items: center;
     gap: 5px;
-}
-
-.colors-list-watch {
-    display: flex;
-    justify-content: space-between;
-}
-
-.colors-list-watch div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    border: 1px solid var(--col-secondary);
-    border-radius: 5px;
-
-    height: 106px;
-    width: 96px;
-}
-
-.colors-list-watch img {
-    height: 60%;
 }
 
 .colors-list div {
@@ -254,6 +240,45 @@ button {
 
 .color-circle6 {
     background-color: #e18472;
+}
+
+/* Fitbit Colors Options */
+
+.colors-list-watch {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.colors-list-watch div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid var(--col-secondary);
+    border-radius: 5px;
+
+    height: 106px;
+    width: 20vw;
+    max-width: 130px;
+    min-width: 96px;
+
+}
+
+.colors-list-watch img {
+    height: 60%;
+}
+
+@media (min-width: 744px) {
+    .colors-list-watch {
+        justify-content: flex-start;
+        gap: 10px;
+    }
+
+    .colors-list-watch div {
+        width: 130px;
+    }
 }
 
 /* Navbar */
@@ -315,7 +340,7 @@ button {
         color: var(--col-primary);
     }
 
-    .active-link{
+    .active-link {
         color: var(--col-primary);
         font-weight: var(--fw-bold);
     }
@@ -335,7 +360,7 @@ main {
     padding-inline: 22px;
 }
 
-.main-image-container {
+.main-image {
     background-color: var(--col-bg-accent);
     border-radius: 15px;
 
@@ -353,6 +378,12 @@ main {
 .info-container .price {
     font-size: var(--fs-subtitle);
     font-weight: var(--fw-bold);
+}
+
+.title-container h1,
+.title-container p,
+.title-container hr {
+    margin-bottom: 20px;
 }
 
 @media (min-width: 744px) {
@@ -400,13 +431,17 @@ main {
 
     .image-container {
         align-self: flex-start;
-        
+
         display: grid;
         grid-template-columns: 50px auto;
         align-items: center;
         gap: 10px;
-
     }
+
+    .main-image-watch {
+        max-height: 70%;
+    }
+
 
 }
 
